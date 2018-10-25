@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="ExamUWP.ShowFile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ExamUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Black">
+        <RelativePanel>
+            <TextBlock Foreground="White" FontSize="40" Margin="140 " Text="Current Files"></TextBlock>
+            <ComboBox  x:Name="FontsCombo" Header="Fonts" Height="44" Width="296" 
+          ItemsSource="{x:Bind ListFile}" DisplayMemberPath="Source" HorizontalAlignment="Left" Margin="405,140,0,0" VerticalAlignment="Top"></ComboBox>
+            <TextBlock Foreground="White" FontSize="40" Margin="140,300 " Text="FileContent"></TextBlock>
+            <TextBox Width="250" Height="200" HorizontalAlignment="Stretch" Margin="415,290,-415,-290" VerticalAlignment="Stretch"  Background="White"></TextBox>
+        </RelativePanel>
+    </Grid>
+</Page>
